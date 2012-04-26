@@ -25,7 +25,7 @@
 					if (key === 'expires') {
 						cookie.options[key] = new Date(value);
 					} else {
-						cookie.options[key] = value;
+						cookie.options[key] = value || true;
 					}
 				} else {
 					cookie.name = key;

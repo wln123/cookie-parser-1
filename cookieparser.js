@@ -1,25 +1,44 @@
-(function($) {
+(function() {
 
 	'use strict';
-
-	function parseCookies(cookie_string) {
-
+	
+	var attributes = ['name', 'value', 'expires', 'path', 'domain', 'secure', 'httponly'];
+	var splitter = /,\s(?=\w+=\w)/g;
+	
+	var cookieparser = function(cookie_string) {
+	
 		var cookies = [];
-		var splitter = /,\s(?=\w+=\w)/g;
 		var cookie_array = cookie_string.split(splitter);
-		
-		$.each(cookie_array, function(i, e) {
-			var cookie = {};
-			var params = e.split(';');
-			$.each(params, function(i, param) {
-				cookie[param.split('=')[0]] = param.split('=')[1] || true;
+	
+		cookie_array.forEach(function(e) {
+			var cookie = {
+				options: {}
+			};
+			var params = e.split('; ');
+	
+			params.forEach(function(param) {
+				param = param.split('=');
+				var key = param[0];
+				var value = param[1];
+				
+				if (attributes.indexOf(key) > 0) {
+					if (key === 'expires') {
+						cookie.options[key] = new Date(value);
+					} else {
+						cookie.options[key] = value;
+					}
+				} else {
+					cookie.name = key;
+					cookie.value = value;
+				}
 			});
+	
 			cookies.push(cookie);
 		});
-
+	
 		return cookies;
-	}
+	};
+	
+	window.cookieparser = cookieparser;
 
-	$.parsecookies = parseCookies;
-
-}(this.jQuery));
+}());

@@ -1,0 +1,15 @@
+{
+  "author": "Dan Jordan",
+  "name": "cookieparser",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danjordan/cookie-parser.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

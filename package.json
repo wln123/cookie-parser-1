@@ -1,15 +1,29 @@
 {
-  "author": "Dan Jordan",
-  "name": "cookieparser",
-  "version": "0.0.0",
+  "name": "cookie-parser",
+  "title": "Cookie Parser",
+  "description": "",
+  "version": "0.1.0",
+  "homepage": "https://github.com/danjordan/cookie-parser",
+  "author": {
+    "name": "Daniel Jordan",
+    "email": "dan@dan-jordan.co.uk"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/danjordan/cookie-parser.git"
   },
-  "dependencies": {},
-  "devDependencies": {},
-  "optionalDependencies": {},
-  "engines": {
-    "node": "*"
-  }
+  "bugs": {
+    "url": "https://github.com/danjordan/cookie-parser/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/danjordan/cookie-parser/blob/master/LICENSE-MIT"
+    },
+    {
+      "type": "GPL",
+      "url": "https://github.com/danjordan/cookie-parser/blob/master/LICENSE-GPL"
+    }
+  ],
+  "keywords": []
 }

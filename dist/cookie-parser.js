@@ -1,3 +1,7 @@
+/*! Cookie Parser - v0.1.0 - 2012-06-26
+* https://github.com/danjordan/cookie-parser
+* Copyright (c) 2012 Daniel Jordan; Licensed MIT, GPL */
+
 (function() {
 
 	'use strict';
